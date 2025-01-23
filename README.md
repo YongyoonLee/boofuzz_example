@@ -4,7 +4,7 @@
 ## booFuzz 설치:
 
 ```
-pip install boofuzz
+pip install boofuzz --break-system-packages
 ```
 
 ## 예제 다운로드 받기:
