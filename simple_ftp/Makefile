@@ -1,12 +1,12 @@
 CC=gcc
-CFLAGS=-c -Wall
+CFLAGS=-c
 LDFLAGS=-lm
 SOURCES=server.c handles.c
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=ftp
 
 $(EXECUTABLE): $(OBJECTS) 
-	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+	$(CC) -std=c90 -Wno-int-conversion $(LDFLAGS) $(OBJECTS) -o $@
 
 .cpp.o:
 	$(CC) $(CFLAGS) $< -o $@
